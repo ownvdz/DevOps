@@ -41,6 +41,17 @@
 	프로브 (probe, 검사)
 		liveness (live) - '살아있는가'					ex) GET /healthz
 		readiness (ready) - '요청 받을 준비가 되었는가'		ex) GET /readyz
+
+
+patch
+	실행 중인 쿠버네티스 리소스를 직접 수정하는 명령어
+	원본 YAML 파일, Git 이력은 자동 변경 X
+
+
+트러블슈팅
+	3단 루틴:	kubectl get pods		# 상태 확인
+			kubectl describe pod <pods명> # Events 확인
+			kubectl logs <pod명> (--previous)	# 에러 메시지
 	
 
 ----------------------------------------------------------------------------------------------------
